@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends 'dashboard.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Category Details</h4>
+                    <div class="table-responsive">
+                      <table class="table table-hover table-striped table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Category Name</th>
+                            <th>Username</th>
+                            <th>Contact Number</th>
+                            <th>Image</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Options</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for i in issues %}
+                          <tr>
+                            <td>{{i.Category}}</td>
+                            <td>{{i.Username}}</td>
+                            <td>{{i.Contact_Number}}</td>
+                            <td><img src="{{i.Image.url}}" width="100px" height="100px" alt=""></td>
+                            <td>{{i.Location}}</td>
+                            <td style="min-width:500px;word-wrap:break-word;white-space:normal;">{{i.Description}}</td>
+                            <td>
+                                <form method="post" action="{% url 'update_issue_status' issue_id=i.id %}">
+                                    {% csrf_token %}
+                                    <label class="form-label mb-1">Change Status</label>
+                                    <select name="status" class="form-select form-select-sm mb-2">
+                                        <option value="unsolved" {% if i.Status == "unsolved" %}selected{% endif %}>Unsolved</option>
+                                        <option value="in_progress" {% if i.Status == "in_progress" %}selected{% endif %}>In Progress</option>
+                                        <option value="solved" {% if i.Status == "solved" %}selected{% endif %}>Solved</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                                </form>
+                            </td>
+                            <td>
+                               
+                                <a href="{% url 'delete_issue' issue_id=i.id %}"  class="btn btn-danger">Delete</a>
+                            </td>
+                           
+                          </tr>
+
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+</body>
+</html>
+{% endblock %}

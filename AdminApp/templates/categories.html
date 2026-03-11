@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'dashboard.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Add Category</h4>
+                    
+                    <form class="forms-sample" method="post" action="{% url 'save_category' %}">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Category Name</label>
+                        <input type="text" class="form-control"  id="exampleInputUsername1" name="category_name" placeholder="Enter Category Name" required>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success w-25">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+</body>
+</html>
+{% endblock %}

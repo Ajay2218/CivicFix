@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">CivicFix logo</title>
+  <desc id="desc">Map pin with a check mark representing civic issue resolution.</desc>
+  <defs>
+    <linearGradient id="pinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7DCB8B" />
+      <stop offset="100%" stop-color="#3D8B69" />
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="54" fill="#F2F8F5" />
+  <path d="M60 16c-18.8 0-34 15.2-34 34 0 24 26.3 48.7 32 54.1a3 3 0 0 0 4 0C67.7 98.7 94 74 94 50c0-18.8-15.2-34-34-34z" fill="url(#pinGradient)" />
+  <circle cx="60" cy="50" r="18" fill="#ffffff" />
+  <path d="M52 50.8l6.2 6.2L70 45.2" fill="none" stroke="#2E6D53" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
