@@ -32,7 +32,7 @@ Follow these steps to run the project locally:
 
 ### 1. Clone the Repository  
 ```bash
-git clone https://github.com/your-username/civicfix.git
+git clone <repository-url>
 cd civicfix
 ```
 
@@ -80,7 +80,12 @@ python manage.py runserver
 
 ### 9. Access the Application  
 - 🌐 Home: http://127.0.0.1:8000/  
-- 🔐 Admin Panel: http://127.0.0.1:8000/admin/  
+ 
 
-### 💡 Note  
-Replace `your-username` with your actual GitHub username.
+## 📂 Project Structure  
+
+- **CivicFix/**: Project configuration, settings, and main URL routing.  
+- **WebApp/**: Core application containing logic for issue reporting, tracking, and user interaction.  
+- **AdminApp/**: Custom admin module for managing complaints, users, and system operations.  
+- **media/**: Storage for uploaded files such as issue images and user-related content.  
+- **static/**: Global CSS, JavaScript, and asset files for frontend design.  
