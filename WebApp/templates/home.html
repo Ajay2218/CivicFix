@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tiya Golf Club - Free HTML CSS Template</title>
+    <title>CivicFix</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -203,16 +203,15 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">About</a>
+                            <a class="nav-link" href="{% url 'home' %}#section_2">About</a>
                         </li>
 
-                        
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Contact Us</a>
+                            <a class="nav-link" href="{% url 'home' %}#section_5">Contact Us</a>
                         </li>
 
                         <li class="nav-item">
@@ -220,10 +219,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'all_post' %}">All Post</a>
+                            <a class="nav-link " href="{% url 'all_post' %}">All Post</a>
                         </li>
-
-                       
                     </ul>
 
                     <div class="d-none d-lg-block ms-lg-3">
